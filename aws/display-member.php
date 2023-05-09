@@ -4,7 +4,7 @@
     <head>
         <meta charset="uft-8">
         <meta name="viewport" content="witdh=device-witdh, initial-scale=1">       
-        <title>Display Member</title>
+        <title>Display Staff</title>
         <script src="topbtn.js" type="text/javascript"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,17 +41,17 @@
         <?php
         require_once 'member-helper.php';
         ?>
-        <h2>DELETE MEMBER RECORD</h2>
+        <h2>DELETE Staff RECORD</h2>
         <form action="" method="POST">
         <table border="10" width="100%" height="200px">
             
             <tr>
-                <th>Student ID</th>
-                <th>Student Name</th>
+                <th>Staff ID</th>
+                <th>Staff Name</th>
                 <th>Gender</th>
-                <th>Program</th>
-                <th>Student Email</th>
-                <th>Student Phone</th>
+                <th>Position</th>
+                <th>Staff Email</th>
+                <th>Staff Phone</th>
                 <th>Delete</th>
             </tr>
         
@@ -59,7 +59,7 @@
     <?php
        
         $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
-        $sql = "SELECT * FROM members";
+        $sql = "SELECT * FROM staff";
         
         if($result = $conn->query($sql)){
      while($record = $result->fetch_object()){
@@ -75,7 +75,7 @@
                       ,$record->id
                       ,$record->name
                       ,$record->gender
-                      ,$record->program
+                      ,$record->position
                       ,$record->email
                       ,$record->phone
                       ,$record->id
@@ -111,11 +111,9 @@
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
+           
             <li>
-              <a href="event.php" class="nav-link text-white link-primary ">Event</a>
-            </li>
-            <li>
-              <a href="insert-member.php" class="nav-link text-white link-primary">Volunteer</a>
+              <a href="insert-member.php" class="nav-link text-white link-primary">Staff</a>
             </li>
           </ul>
         </div>
@@ -125,10 +123,10 @@
           <h5 class="text-uppercase">Contact Us</h5>
 
           <ul class="list-unstyled">
-            <p>TARUMT Penang Branch Campus</p>
-            <p>Publicity Committee</p>
+            <p>SCBC Human Resouce Management</p>
+            <p>Help Center</p>
             <li>
-              <a class="text-white link-primary" href="mailto: css.tarumt@gmail.com">css.tarumt@gmail.com</a>
+              <a class="text-white link-primary" href="mailto: scbc@gmail.com">scbc@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -139,11 +137,11 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/TARUCPBCSS"" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/SCBC"" role="button">
                   <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/cs_taruc/?hl=en" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/scbc/?hl=en" role="button">
                   <i class="fab fa-instagram"></i>
                 </a>
             </li>
@@ -155,7 +153,7 @@
 
   <hr style="color:rgb(97, 97, 97);background-color:rgb(37, 37, 37)">
   <div class="text-center pb-2 text-bg-dark">
-    <p class="text-white"><small>@Computer Science Society Tarumt Penang</small></p>
+    <p class="text-white"><small>@SCBC Human Resource Management</small></p>
   </div>
 </footer>
    
