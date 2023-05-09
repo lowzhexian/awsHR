@@ -8,15 +8,15 @@
 define('DB_HOST',"localhost");
 define('DB_USER',"root");
 define('DB_PASS',"");
-define('DB_NAME',"CSsociety");
+define('DB_NAME',"HRDB");
 
 
 
-function checkProgram ($program){
-    if($program == NULL){
-        return"<p style='color:white;'>Please select a <strong>program</strong>!</p>";
-    }else if(!array_key_exists($program, getAllProgram())){
-        return"<p style='color:red;'><b>select a valid program!</b></p>";
+function checkPositiom ($position){
+    if($position== NULL){
+        return"<p style='color:white;'>Please select a <strong>position</strong>!</p>";
+    }else if(!array_key_exists($position, getAllPosition())){
+        return"<p style='color:red;'><b>select a valid position!</b></p>";
         }
 
 }
@@ -39,7 +39,7 @@ function checkEmail($email){
     }
 }
 
-function checkStudentName ($name){
+function checkStaffName ($name){
     if($name == NULL){
         return"<p style='color:white;'>Please Fill In Your <strong>Name</strong>!</p>";
     }else if(!preg_match("/^[A-Za-z@ ,\.\-\'\/]+$/",$name)){
@@ -57,13 +57,13 @@ function checkGender($gender)
  
 }
 
-function checkStudentID($id){
+function checkStaffID($id){
     if($id == NULL){
-        return"<p style='color:white;'>Please Fill In Your <strong>Student ID</strong>!</p>";
+        return"<p style='color:white;'>Please Fill In  <strong>Staff ID</strong>!</p>";
     }else if(!preg_match("/^[0-9]{7}$/",$id)){
-        return "<p style='color:red;'><b>Invaild Student ID!</b></p>";
+        return "<p style='color:red;'><b>Invaild Staff ID!</b></p>";
     }else if(checkDupicateID($id)){
-        return "<p style='color:white;'>Duplicated Student ID Deteced</p>";
+        return "<p style='color:white;'>Duplicated Staff ID Deteced</p>";
     }
 }
 function checkDupicateID($id){
@@ -71,7 +71,7 @@ function checkDupicateID($id){
 
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     $id  = $conn->real_escape_string($id);
-    $sql = "SELECT * FROM members WHERE ID = '$id'";
+    $sql = "SELECT * FROM staff WHERE ID = '$id'";
 
     if ($result = $conn->query($sql))
     {
@@ -92,12 +92,12 @@ function getAllGender(){
         "F"=>"Female️",
     );
 }
-function getAllProgram(){
+function getAllPosition(){
     return array(
-        "IT"=>"Diploma in Information Technology",
-        "CS"=>"Diploma in Computer Sains",
-        "MT"=>"Diploma in Multimedia Technology",
-        "IS"=>"Diploma in Information System",
+        "CEO"=>"Chief Executive Officer",
+        "MD"=>"Managing Director",
+        "ST"=>"Staff",
+        "MN"=>"Manager",
     );
 }
 
