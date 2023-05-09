@@ -41,20 +41,20 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `name`, `gender`, `program`, `email`, `phone`) VALUES
-(2201074, 'Yeoh Hu Lun', 'M', 'CS', 'yeahhl-pm22@student.tarc.edu.my', '0131003092'),
-(2201103, 'khor ying zhen', 'M', 'MT', 'khoryz-pm22@student.tarc.edu.my', '0154429766'),
-(2201288, 'Lim Jun Jie', 'M', 'IT', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
-(2204021, 'wong yun zhe', 'M', 'IT', 'wongyz-pm22@student.tarc.edu.my', '0142240966'),
-(2204355, 'Lau Zhi Xin', 'F', 'IT', 'lauzx-pm22@student.tarc.edu.my', '0174055972'),
-(2204434, 'Chan Mei Mei', 'M', 'IT', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
-(2205468, 'Hor Yu Xin', 'F', 'CS', 'horyx-pm22@student.tarc.edu.my', '0187761245'),
-(2208850, 'Tan Jing Shen', 'M', 'IT', 'tanjs-pm22@student.tarc.edu.my', '0194304870'),
-(2214496, 'Chua Chan Jing', 'F', 'IT', 'chuacj-pm22@student.tarc.edu.my', '0103325411'),
-(2216428, 'lim han han', 'M', 'IT', 'limhh-pm22@student.tarc.edu.my', '0183418887'),
-(2216607, 'Teoh Jun Kai', 'M', 'MT', 'teohjk-pm22@student.tarc.edu.my', '0106648851'),
-(2218204, 'lim han han', 'M', 'IT', 'limhh-pm22@student.tarc.edu.my', '0183418887'),
-(2218683, 'Teoh Jun Kai', 'M', 'IS', 'teohjk-pm22@student.tarc.edu.my', '0106648851'),
-(2218700, 'Loo Yi Xiang', 'M', 'IT', 'looyx-pm22@student.tarc.edu.my', '0128234420');
+(2201074, 'Yeoh Hu Lun', 'M', 'CEO', 'yeahhl-pm22@student.tarc.edu.my', '0131003092'),
+(2201103, 'khor ying zhen', 'M', 'ST', 'khoryz-pm22@student.tarc.edu.my', '0154429766'),
+(2201288, 'Lim Jun Jie', 'M', 'ST', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
+(2204021, 'wong yun zhe', 'M', 'ST', 'wongyz-pm22@student.tarc.edu.my', '0142240966'),
+(2204355, 'Lau Zhi Xin', 'F', 'ST', 'lauzx-pm22@student.tarc.edu.my', '0174055972'),
+(2204434, 'Chan Mei Mei', 'M', 'ST', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
+(2205468, 'Hor Yu Xin', 'F', 'MN', 'horyx-pm22@student.tarc.edu.my', '0187761245'),
+(2208850, 'Tan Jing Shen', 'M', 'MN', 'tanjs-pm22@student.tarc.edu.my', '0194304870'),
+(2214496, 'Chua Chan Jing', 'F', 'MN', 'chuacj-pm22@student.tarc.edu.my', '0103325411'),
+(2216428, 'lim han han', 'M', 'ST', 'limhh-pm22@student.tarc.edu.my', '0183418887'),
+(2216607, 'Teoh Jun Kai', 'M', 'ST', 'teohjk-pm22@student.tarc.edu.my', '0106648851'),
+(2218204, 'lim han han', 'M', 'ST', 'limhh-pm22@student.tarc.edu.my', '0183418887'),
+(2218683, 'Teoh Jun Kai', 'M', 'ST', 'teohjk-pm22@student.tarc.edu.my', '0106648851'),
+(2218700, 'Loo Yi Xiang', 'M', 'MD', 'looyx-pm22@student.tarc.edu.my', '0128234420');
 
 --
 -- Indexes for dumped tables
