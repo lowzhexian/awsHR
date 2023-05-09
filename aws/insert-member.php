@@ -177,11 +177,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
+          
             <li>
-              <a href="event.php" class="nav-link text-white link-primary ">Event</a>
-            </li>
-            <li>
-              <a href="insert-member.php" class="nav-link text-white link-primary">Volunteer</a>
+              <a href="insert-member.php" class="nav-link text-white link-primary">Staff</a>
             </li>
           </ul>
         </div>
