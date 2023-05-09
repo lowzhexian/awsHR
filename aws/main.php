@@ -59,34 +59,29 @@
      </div>
     
      <div class="title-2 text-white">
-      <h1 text-white>Computer Science Society <h1> 
+      <h1 text-white>SCBC Human Resource Management<h1> 
      </div>
 
-     <div class="title-3 text-white">
-      <p text-white>TARUMT Penang<p> 
-     </div>
+
       
   <div class="img-slider fill text-white">
       <div class="slide active">
-        <img src="mp wallpaper 1.jpeg" alt="" class="img-thumbnail">
+   
         <div class="caption">
-          <p>Welcome to Computer Science Society</p>
+          <p>Welcome to SBCB Admin Site</p>
         </div>
         </div>
         <div class="slide title-white">
-          <img src="Slide2.png" alt="">
+      
           <div class="caption-link a-1">
             <a class="text-white link-primary" href="insert-member.php">Join Us Now</a>
           </div>
           <div class="caption-reg">
-            <p class="">Register to be a society member now</p>
+            <p class="">Register staff</p>
           </div>
         </div>
         <div class="slide">
-          <img src="Slide3.png" alt="">
-          <div class="caption">
-            <p class="">Computer Science Society TARUMT Penang Social Media</p>
-          </div>
+        
         </div>
         <div class="navigation">
           <div class="btn"></div>
@@ -98,43 +93,14 @@
       </div>
   </div>
 
- 
 
 
-<hr class="pt-5">
 
-<div class="container pb-5">
-    <hr class="pt-3">
-
-    <div class="row align-items-center">
-      <div class="col-md-7 order-md-2 pt-4">
-        <h2 class="text-white" text-decoration="underline">About Computer Science Society</span></h2>
-        <p class="text-white pt-3" style="font-size: 20px;">CS Society <strong>(also known as Computer Science Society)</strong> is a student organization 
-            supervised by an advisor from the School of Computer Science.All students in the School of <strong>Computer Science</strong> are enrolled by automatically in this society. 
-         The society's executive committee has been selected as its leaders.The student of <strong>Computer Science Society</strong> in helping to plan the school's activities 
-            and various type of events.Throughout the years,Cs society had organised many <strong>activities and event</strong> such as Webpage Design competition, 
-            Dota Tournament,Industrial visit, and community projects.There are not just limited to  from the School of Computer Science.The
-            students from different schools and communities may also take part in these events .</p></div>
-      <div class="col-md-5 order-md-1">
-        <img src="aboutus.jpg" width="500" height="500" class="img-thumbnail">
-      </div>
-    </div>
-</div>
 
 <hr class="pt-5">
 
 <div class=" container ">
-  <div class="row align-items-center ">
-     <div class="column-1 col-lg-6">
-       <a href="event.php">
-         <img src="event.jpg" class="img-thumbnail">
-       </a>
-       <div class="img-a-text">
-         <a href="event.php"class="nav-link text-white link-primary">
-          <h3 >Event</h3>
-         </a>
-       </div>
-     </div>
+
      
      <div class="column-1 col-lg-6 ">
        
@@ -162,11 +128,9 @@
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
+          
             <li>
-              <a href="event.php" class="nav-link text-white link-primary ">Event</a>
-            </li>
-            <li>
-              <a href="insert-member.php" class="nav-link text-white link-primary">Volunteer</a>
+              <a href="insert-member.php" class="nav-link text-white link-primary">Staff</a>
             </li>
           </ul>
         </div>
@@ -176,10 +140,10 @@
           <h5 class="text-uppercase">Contact Us</h5>
 
           <ul class="list-unstyled">
-            <p>TARUMT Penang Branch Campus</p>
-            <p>Publicity Committee</p>
+            <p>SCBC Human Resource Management/p>
+            <p>Help Center</p>
             <li>
-              <a class="text-white link-primary" href="mailto: css.tarumt@gmail.com">css.tarumt@gmail.com</a>
+              <a class="text-white link-primary" href="mailto: scbc@gmail.com">scbc@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -190,11 +154,11 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/TARUCPBCSS"" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/SCBC"" role="button">
                   <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/cs_taruc/?hl=en" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/scbc/?hl=en" role="button">
                   <i class="fab fa-instagram"></i>
                 </a>
             </li>
@@ -206,7 +170,7 @@
 
   <hr style="color:rgb(97, 97, 97);background-color:rgb(37, 37, 37)">
   <div class="text-center pb-2 text-bg-dark">
-    <p class="text-white"><small>@Computer Science Society Tarumt Penang</small></p>
+    <p class="text-white"><small>@SCBC Human Resource Management</small></p>
   </div>
 </footer>
     </body>
