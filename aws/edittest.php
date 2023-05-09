@@ -11,14 +11,14 @@ if (isset($_GET['id'])) {
         $email = isset($_POST['email']) ? $_POST['email'] : '';
         $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
         $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
-        $program= isset($_POST['program']) ? $_POST['program'] : '';
+        $program= isset($_POST['position']) ? $_POST['position'] : '';
        
-        $stmt = $pdo->prepare('UPDATE members SET id = ?, name = ?, email = ?, phone = ?, gender = ?, program = ? WHERE id = ?');
-        $stmt->execute([$id, $name, $email, $phone, $gender, $program, $_GET['id']]);
+        $stmt = $pdo->prepare('UPDATE staff SET id = ?, name = ?, email = ?, phone = ?, gender = ?, position = ? WHERE id = ?');
+        $stmt->execute([$id, $name, $email, $phone, $gender, $position, $_GET['id']]);
         $msg = 'Updated Successfully!Returning to the List...';header("Refresh:3; url=displaytest.php");
     }
     
-    $stmt = $pdo->prepare('SELECT * FROM members WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT * FROM staff WHERE id = ?');
     $stmt->execute([$_GET['id']]);
     $contact = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$contact) {
@@ -45,13 +45,13 @@ if (isset($_GET['id'])) {
         <option value="M">Male</option>
         </select>
         <label for="phone">Phone</label>
-        <label for="program">Program</label>
+        <label for="program">Position</label>
         <input type="text" name="phone" placeholder="00000000" value="<?=$contact['phone']?>" id="phone">
-        <select type="radio" name="program" placeholder="---" value="<?=$contact['program']?>" id="program">
-            <option value="IT">Diploma In Information Technology</option>    
-            <option value="CS">Diploma In Computer Sains</option>    
-            <option value="MT">Diploma In Multimedia Technology</option>    
-            <option value="IS">Diploma In Information System</option>
+        <select type="radio" name="position" placeholder="---" value="<?=$contact['position']?>" id="position">
+            <option value="CEO">Chief Executive Officer</option>    
+            <option value="MD">Managing Director</option>    
+            <option value="ST">Staff</option>    
+            <option value="MN">Manager</option>
         </select>
         <input type="submit" value="Update">
     </form>
