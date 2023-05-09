@@ -40,7 +40,7 @@ CREATE TABLE `staff` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `staff` (`id`, `name`, `gender`, `program`, `email`, `phone`) VALUES
+INSERT INTO `staff` (`id`, `name`, `gender`, `position`, `email`, `phone`) VALUES
 (2201074, 'Yeoh Hu Lun', 'M', 'CEO', 'yeahhl-pm22@student.tarc.edu.my', '0131003092'),
 (2201103, 'khor ying zhen', 'M', 'ST', 'khoryz-pm22@student.tarc.edu.my', '0154429766'),
 (2201288, 'Lim Jun Jie', 'M', 'ST', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
