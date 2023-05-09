@@ -27,8 +27,8 @@
                   </svg>
                 </a>
                 </li>
-                <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="event.php">Event</a></li>
-                <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="insert-member.php">Volunteer</a></li>  
+                
+                <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="insert-member.php">Staff</a></li>  
              </ul>
              
              <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-4" role="search">
