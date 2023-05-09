@@ -99,7 +99,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                $statement -> bind_param('ssssss', $id,$name,$gender,$position,$email,$phone);
                $statement ->execute();
                if($statement -> affected_rows >0){
-                 echo"<div><a href = 'main.php'>Back to menu</a><p style='color:white;'>Student <strong>$name</strong> is inserted ! </p><div>";  
+                 echo"<div><a href = 'main.php'>Back to menu</a><p style='color:white;'>Staff <strong>$name</strong> is inserted ! </p><div>";  
                }else{
                    echo"<div><p style='color:white;'>Unsable to insert record !</p><div>";
                }
