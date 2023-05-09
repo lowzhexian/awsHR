@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `members`
+-- Table structure for table `staff`
 --
 
 CREATE TABLE `staff` (
