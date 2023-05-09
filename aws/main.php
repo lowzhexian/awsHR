@@ -137,12 +137,10 @@
      </div>
      
      <div class="column-1 col-lg-6 ">
-       <a href="insert-member.php">
-         <img src="volunteer.jpeg" class="img-thumbnail">
-       </a>
+       
        <div class="img-a-text">
         <a href="insert-member.php"class="nav-link text-white link-primary">
-          <h3 >Volunteer</h3>
+          <h3 >Staff</h3>
         </a>
        </div>
      </div>
