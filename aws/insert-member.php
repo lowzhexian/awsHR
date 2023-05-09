@@ -38,15 +38,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             </div>
         </div>
     </header>
-    
-    <div class="body"style="background-image: url('computer-science.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;width:100%;text-align: center;">
+
 
     <div class="container">
     <div class="title-1 text-white pt-4"> 
-        <h1>Volunteer Form</h1>
+        <h1>Staff Register</h1>
      </div>
         <?php
         require_once 'member-helper.php';
@@ -55,7 +51,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
       global $id;
       global $name;
       global $gender;
-      global $program;
+      global $position;
       global $email;
       global $phone;
       
