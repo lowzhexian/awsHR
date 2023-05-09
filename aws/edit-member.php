@@ -59,30 +59,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     if($_SERVER["REQUEST_METHOD"]=="GET") {
         isset($_GET["id"]) ? $id = strtoupper(trim($_GET["id"])) : $id = "";
         $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $sql = "SELECT * FROM members WHERE id ='$id'";
+        $sql = "SELECT * FROM staff WHERE id ='$id'";
         $result = $conn->query($sql);
         if($record = $result->fetch_object()) {
             $id = $record->id;
             $name = $record->name;
             $gender = $record->gender;
-            $program = $record->program;
+            $positiom = $record->position;
             $email = $record->email;
             $phone = $record->phone;
                        
             
-             $error['id'] = checkStudentID($id);
-            $error['name'] = checkStudentName($name);
+             $error['id'] = checkStaffID($id);
+            $error['name'] = checkStaffName($name);
             $error['gender'] = checkGender($gender);
-            $error['program'] = checkProgram($program);
+            $error['position'] = checkPosition($position);
             $error['email'] = checkEmail($email);
             $error['phone'] = checkPhone($phone);
             
             if(empty($error)) {
-                $sql = "UPDATE members SET name = ?, gender = ?, program = ?, email = ? , phone = ? WHERE id = ?";
+                $sql = "UPDATE staff SET name = ?, gender = ?, position = ?, email = ? , phone = ? WHERE id = ?";
                 $stmt = $conn->prepare($sql);
-                $stmt->bind_param('ssssss', $name, $gender, $program, $email, $phone, $sid); 
+                $stmt->bind_param('ssssss', $name, $gender, $position, $email, $phone, $sid); 
                 if($stmt->execute()) {
-                    echo "<div><a href='display-member.php'>Back to list</a>Student $name is updated<div>";
+                    echo "<div><a href='display-member.php'>Back to list</a>Staff $name is updated<div>";
                 } else {
                     echo "<div class='error'><a href='display-member.php'>Back to lists</a> unable to update records</div>";
                 }
@@ -104,7 +104,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                
         $name = trim($_POST["name"]);                   
         isset($_POST['gender'])?$gender=$_POST['gender'] : $gender=NULL;
-        $program = trim($_POST["program"]); 
+        $position = trim($_POST["position"]); 
         $email = trim($_POST["email"]);
         $phone = trim($_POST["phone"]);
     }
@@ -149,9 +149,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                       <select name="program">
                           <option value="">--Select an option--</option>
                          <?php
-                            $program = getAllProgram();
-                            foreach ($program as $subject => $prog) {
-                                printf("<option value='%s'%s>%s</option>",$subject,($program == $subject)?'checked':" ",$prog);
+                            $program = getAllPosition();
+                            foreach ($position as $incharge => $pos) {
+                                printf("<option value='%s'%s>%s</option>",$incharge,($position == $incharge)?'checked':" ",$pos);
                             }                    
                           ?>
                       </select></td>
@@ -191,11 +191,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
-            <li>
-              <a href="event.php" class="nav-link text-white link-primary ">Event</a>
-            </li>
-            <li>
-              <a href="insert-member.php" class="nav-link text-white link-primary">Volunteer</a>
+      
+              <a href="insert-member.php" class="nav-link text-white link-primary">Staff</a>
             </li>
           </ul>
         </div>
@@ -205,10 +202,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
           <h5 class="text-uppercase">Contact Us</h5>
 
           <ul class="list-unstyled">
-            <p>TARUMT Penang Branch Campus</p>
-            <p>Publicity Committee</p>
+            <p>SBBC Human Resource Management</p>
+            <p>Help Center</p>
             <li>
-              <a class="text-white link-primary" href="mailto: css.tarumt@gmail.com">css.tarumt@gmail.com</a>
+              <a class="text-white link-primary" href="mailto: scbc@gmail.com">scbc@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -219,11 +216,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
           <ul class="list-unstyled mb-0">
             <li>
-                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/TARUCPBCSS"" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/SCBC"" role="button">
                   <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/cs_taruc/?hl=en" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/scbc/?hl=en" role="button">
                   <i class="fab fa-instagram"></i>
                 </a>
             </li>
