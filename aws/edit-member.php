@@ -233,7 +233,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
   <hr style="color:rgb(97, 97, 97);background-color:rgb(37, 37, 37)">
   <div class="text-center pb-2 text-bg-dark">
-    <p class="text-white"><small>@Computer Science Society Tarumt Penang</small></p>
+    <p class="text-white"><small>@SCBC Human Resource Management</small></p>
   </div>
     </footer>
     </body>
