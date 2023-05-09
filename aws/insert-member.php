@@ -84,8 +84,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
            $position = trim($_POST['position']);
            $email = trim($_POST['email']);
            $phone = trim($_POST['phone']);
-           $error ['id']=checkStudentID($id);
-           $error ['name']=checkStudentName($name);
+           $error ['id']=checkStaffID($id);
+           $error ['name']=checkStaffName($name);
            $error['gender']= checkGender($gender);
            $error ['position']= checkPosition($position);
            $error ['email']= checkEmail($email);
