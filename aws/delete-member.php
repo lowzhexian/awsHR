@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Delete Member</title>
+        <title>Delete Staff</title>
         <link href="topbtn.css" rel="stylesheet" type="text/css" />
         <script src="topbtn.js" type="text/javascript"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -40,13 +40,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             </div>
         </div>
     </header>
-    <div class="body"style="background-image: url('computer-science.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;width:100%;text-align: center;">
+   
     <div class="container">
     <div class="title-1 text-white pt-4">
-         <h1>Delete Member</h1>
+         <h1>Delete Staff</h1>
            <?php
     require_once 'member-helper.php';
             
@@ -55,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
     $id = isset($_GET["id"]) ? strtoupper(trim($_GET["id"])) : "";
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $sql = "SELECT * FROM members WHERE id = ?";
+    $sql = "SELECT * FROM staff WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $id);
     $stmt->execute();
@@ -65,21 +62,21 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         $id = $record->id;
         $name = $record->name;
         $gender = $record->gender;
-        $program = $record->program;
+        $position = $record->position;
         $email = $record->email;
         $phone = $record->phone;
         
         
 
-        printf("<p>Are you sure you want to delete the following student?</p>
+        printf("<p>Are you sure you want to delete the following staff?</p>
                 <table border = 1>
                 <tr>
-                <td>Student ID:</td>
+                <td>Staff ID:</td>
                 <td>%s</td>
                 </tr>
 
                 <tr>
-                <td>Student Name:</td>
+                <td>Staff Name:</td>
                 <td>%s</td>
                 </tr>
 
@@ -89,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
                 </tr>
 
                  <tr>
-                <td>Program:</td>
+                <td>Position:</td>
                 <td>%s</td>
                 </tr>
 
@@ -111,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
                 <input type='submit' value='Yes' name='btnYes'/>
                 <input type='button' value='Cancel' name='btnCancel' onclick='location =\"display-member.php\"'/>
                 </form>
-                ", $id, $name, getAllGender()[$gender], getAllProgram()[$program], $email, $phone , $id, $name);
+                ", $id, $name, getAllGender()[$gender], getAllPosition()[$position], $email, $phone , $id, $name);
 
     } else {
         echo "<div class ='error'><a href = 'display-member.php'>Back to lists</a> no record have been choosen</div>";
@@ -127,13 +124,13 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-    $sql = "DELETE FROM members WHERE id = ?";
+    $sql = "DELETE FROM staff WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $id);
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
-        echo "<div><a href = 'display-member.php'>Back to list</a> Student $name is deleted </div>";
+        echo "<div><a href = 'display-member.php'>Back to list</a> Staff $name is deleted </div>";
     } else {
         echo "<div class ='error'><a href = 'display-member.php'>Back to lists</a> unable to delete records</div>";
     }
@@ -162,11 +159,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
           <h5 class="text-uppercase">Links</h5>
 
           <ul class="list-unstyled mb-0">
+      
             <li>
-              <a href="event.php" class="nav-link text-white link-primary ">Event</a>
-            </li>
-            <li>
-              <a href="insert-member.php" class="nav-link text-white link-primary">Volunteer</a>
+              <a href="insert-member.php" class="nav-link text-white link-primary">Staff</a>
             </li>
           </ul>
         </div>
@@ -176,10 +171,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
           <h5 class="text-uppercase">Contact Us</h5>
 
           <ul class="list-unstyled">
-            <p>TARUMT Penang Branch Campus</p>
-            <p>Publicity Committee</p>
+            <p>SCBC Human Resource Management</p>
+            <p>Help Center</p>
             <li>
-              <a class="text-white link-primary" href="mailto: css.tarumt@gmail.com">css.tarumt@gmail.com</a>
+              <a class="text-white link-primary" href="mailto: scbc@gmail.com">scbc@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -190,11 +185,11 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
           <ul class="list-unstyled mb-0">
             <li>
-                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/TARUCPBCSS"" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" href="https://www.facebook.com/SCBC"" role="button">
                   <i class="fab fa-facebook-f"></i>
                 </a>
 
-                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/cs_taruc/?hl=en" role="button">
+                <a class="btn btn-outline-primary btn-floating m-2" style="width:39px; text-align: center;" href="https://www.instagram.com/scbc/?hl=en" role="button">
                   <i class="fab fa-instagram"></i>
                 </a>
             </li>
@@ -206,7 +201,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
   <hr style="color:rgb(97, 97, 97);background-color:rgb(37, 37, 37)">
   <div class="text-center pb-2 text-bg-dark">
-    <p class="text-white"><small>@Computer Science Society Tarumt Penang</small></p>
+    <p class="text-white"><small>@SCBC Human Resource Management</small></p>
   </div>
 </footer>
    
