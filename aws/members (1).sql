@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cssociety`
+-- Database: `HRDB`
 --
 
 -- --------------------------------------------------------
@@ -27,11 +27,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `members`
 --
 
-CREATE TABLE `members` (
+CREATE TABLE `staff` (
   `id` int(7) NOT NULL,
   `name` varchar(20) NOT NULL,
   `gender` char(1) NOT NULL,
-  `program` varchar(50) NOT NULL,
+  `position` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -40,7 +40,7 @@ CREATE TABLE `members` (
 -- Dumping data for table `members`
 --
 
-INSERT INTO `members` (`id`, `name`, `gender`, `program`, `email`, `phone`) VALUES
+INSERT INTO `staff` (`id`, `name`, `gender`, `program`, `email`, `phone`) VALUES
 (2201074, 'Yeoh Hu Lun', 'M', 'CS', 'yeahhl-pm22@student.tarc.edu.my', '0131003092'),
 (2201103, 'khor ying zhen', 'M', 'MT', 'khoryz-pm22@student.tarc.edu.my', '0154429766'),
 (2201288, 'Lim Jun Jie', 'M', 'IT', 'limjj-pm22@student.tarc.edu.my', '0134205311'),
@@ -61,9 +61,9 @@ INSERT INTO `members` (`id`, `name`, `gender`, `program`, `email`, `phone`) VALU
 --
 
 --
--- Indexes for table `members`
+-- Indexes for table `staff`
 --
-ALTER TABLE `members`
+ALTER TABLE `staff`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -71,7 +71,7 @@ ALTER TABLE `members`
 --
 
 --
--- AUTO_INCREMENT for table `members`
+-- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `members`
   MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2218701;
