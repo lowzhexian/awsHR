@@ -94,7 +94,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
            $error=array_filter($error);
            if(empty($error)){
                $conn = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
-               $sql="INSERT INTO members(id,name,gender,position,email,phone)VALUES (?,?,?,?,?,?)";
+               $sql="INSERT INTO staff(id,name,gender,position,email,phone)VALUES (?,?,?,?,?,?)";
                $statement = $conn -> prepare($sql);
                $statement -> bind_param('ssssss', $id,$name,$gender,$position,$email,$phone);
                $statement ->execute();
