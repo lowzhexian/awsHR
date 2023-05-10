@@ -15,7 +15,7 @@ $stmt->execute();
 
 $contacts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$num_contacts = $pdo->query('SELECT COUNT(*) FROM members')->fetchColumn();
+$num_contacts = $pdo->query('SELECT COUNT(*) FROM staff')->fetchColumn();
 ?>
 
 <?=template_header('Read')?>
