@@ -2,7 +2,7 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Computer Science Society</title>
+        <title>HR Management System</title>
         <link href="topbtn.css" rel="stylesheet" type="text/css" />
         <script src="topbtn.js" type="text/javascript"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
