@@ -31,6 +31,9 @@
                   </svg>
                 </a>
               </li>
+                      <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="display-member.php">Staff</a></li>  
+           <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="displaytest.php">Edit Staff</a></li>  
+          
               </ul>
 
             </div>
@@ -41,7 +44,7 @@
         <?php
         require_once 'member-helper.php';
         ?>
-        <h2>DELETE Staff RECORD</h2>
+        <h2>Staff RECORD</h2>
         <form action="" method="POST">
         <table border="10" width="100%" height="200px">
             
