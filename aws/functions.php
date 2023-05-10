@@ -1,8 +1,8 @@
 <?php
 function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
+    $DATABASE_HOST = 'hrdbid.cbjjp9rsqbdd.us-east-1.rds.amazonaws.com';
+    $DATABASE_USER = 'admin';
+    $DATABASE_PASS = 'HRDBHRDB';
     $DATABASE_NAME = 'HRDB';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -24,7 +24,7 @@ echo <<<EOT
 	<body>
     <nav class="navtop">
     	<div>
-    		<h1>Website Title</h1>
+    		<h1>SCBC Human Resource Management</h1>
             <a href="main.php"><i class="fas fa-home"></i>Home</a>
     	</div>
     </nav>
