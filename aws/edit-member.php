@@ -35,6 +35,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                   </svg>
                 </a>
               </li>
+                      <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="display-member.php">Staff</a></li>  
+           <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="displaytest.php">Edit Staff</a></li>  
+          
               </ul>
 
             </div>
