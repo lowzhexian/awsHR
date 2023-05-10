@@ -33,6 +33,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                   </svg>
                 </a>
               </li>
+                 </li>
+                
+                <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="display-member.php">Staff</a></li>  
+           <li> <a class="nav-link fs-5 px-2 text-white link-primary" href="displaytest.php">Edit Staff</a></li>  
+          
               </ul>
 
             </div>
@@ -41,7 +46,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
 
     <div class="container">
-    <div class="title-1 text-white pt-4"> 
+    <div class=""> 
         <h1>Staff Register</h1>
      </div>
         <?php
@@ -115,7 +120,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         }
       ?>
         <form action="" method="POST">
-              <table class="text-white">
+              <table class="">
                   </br>
               <tr>
                   <td>Staff ID:     
@@ -156,7 +161,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
               </tr>
               </table>
             </br>
-             <input type="submit" value="Sign up" name="btnInsert"/>
+             <input type="submit" value="Sign up" name="btnInsert" style="margin-left:40%"/>
           <input type="button" value="Cancel" name="btnCancel" onclick="location='main.php'"/>
         </form>
     </div>
