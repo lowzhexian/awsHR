@@ -31,29 +31,35 @@ if (isset($_GET['id'])) {
 
 
 <div class="content update">
-	<h2>Update Member<?=$contact['id']?></h2>
-    <form action="edittest.php?id=<?=$contact['id']?>" method="post">
-        <label for="id">ID</label>
-        <label for="name">Name</label>
-        <input type="text" name="id" placeholder="1" value="<?=$contact['id']?>" id="id">
-        <input type="text" name="name" placeholder="John Doe" value="<?=$contact['name']?>" id="name">
-        <label for="email">Email</label>
-        <label for="phone">gender</label>
-        <input type="text" name="email" placeholder="johndoe@example.com" value="<?=$contact['email']?>" id="email">
-        <select type="radio" name="gender" placeholder="Male" value="<?=$contact['gender']?>" id="gender">
+	<h2 style="margin-left:45%;font-family: Arial">Update Staff <?=$contact['id']?></h2>
+    <form action="edittest.php?id=<?=$contact['id']?>" method="post" style="background-color: lightblue;width:600px;height:500px;margin-left: 30%;padding-left: 60px;padding-top: 40px;border-radius: 5px">
+        <b> <label for="id">Staff ID</label></b>
+                <b><label for="name"style="margin-left: 300px">Name</label></b>
+        <br><br>
+        <input type="text" name="id" placeholder="1" value="<?=$contact['id']?>" id="id" style="border:grey solid;border-radius: 5px">
+        <input type="text" name="name" placeholder="John Doe" value="<?=$contact['name']?>" id="name"style="margin-left: 150px;border:grey solid;border-radius: 5px">
+        <br><br>
+        <b><label for="email">Email</label></b>
+                <b>  <label for="phone"style="margin-left: 300px">Gender</label></b>
+        <br><br>
+        <input type="text" name="email" placeholder="johndoe@example.com" value="<?=$contact['email']?>" id="email"style="border:grey solid;border-radius: 5px;">
+        <select type="radio" name="gender" placeholder="Male" value="<?=$contact['gender']?>" id="gender"style="margin-left: 165px;border:grey solid;border-radius: 5px">
         <option value="F">Female</option>
         <option value="M">Male</option>
         </select>
-        <label for="phone">Phone</label>
-        <label for="program">Position</label>
-        <input type="text" name="phone" placeholder="00000000" value="<?=$contact['phone']?>" id="phone">
-        <select type="radio" name="position" placeholder="---" value="<?=$contact['position']?>" id="position">
+        <br><br>
+        <b> <label for="phone">Phone</label></b>
+        <b><label for="position"style="margin-left: 300px">Position</label></b>
+        <br><br>
+        <input type="text" name="phone" placeholder="00000000" value="<?=$contact['phone']?>" id="phone"style="border:grey solid;border-radius: 5px">
+        <select type="radio" name="position" placeholder="---" value="<?=$contact['position']?>" id="position" style="margin-left: 150px;border:grey solid;border-radius: 5px">
             <option value="CEO">Chief Executive Officer</option>    
             <option value="MD">Managing Director</option>    
             <option value="ST">Staff</option>    
             <option value="MN">Manager</option>
         </select>
-        <input type="submit" value="Update">
+        <br><br>
+        <input type="submit" value="Update"style="background-color: lightgreen;border-radius: 6px">
     </form>
     <?php if ($msg): ?>
     <p><?=$msg?></p>
